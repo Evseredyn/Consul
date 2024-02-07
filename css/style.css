@@ -988,7 +988,7 @@ h1 {
   line-height: 47px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #2E394D;
+  color: #112e64;
   margin: 20px 0;
 }
 
@@ -1024,7 +1024,7 @@ h1 {
   -webkit-box-shadow: 0px 8px 34px rgba(43, 51, 79, 0.07);
           box-shadow: 0px 8px 34px rgba(43, 51, 79, 0.07);
   border-radius: 80px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
   position: relative;
 }
@@ -2449,7 +2449,7 @@ animation: uptocallmini 3s 0s ease-out infinite;
 
 /* Footer */
 .footer {
-  background-color: #2E394D;
+  background-color: #0d4c84;
   color: #ffffff;
 }
 
@@ -2497,11 +2497,11 @@ animation: uptocallmini 3s 0s ease-out infinite;
 .footer-list {
   font-size: 14px;
   line-height: 30px;
-  color: #838EA2;
+  color: #c3d2ed;
 }
 
 .footer-link {
-  color: #838EA2;
+  color: #c3d2ed;
   text-decoration: none;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;

@@ -1074,10 +1074,14 @@ h1 {
 }
 
 .better-icon-four::after {
-  background-image: url(../images/better-icon-four.png);
+  background-image: url(../images/better-icon-six.png);
 }
 
 .better-icon-five::after {
+  background-image: url(../images/better-icon-four.png);
+}
+
+.better-icon-six::after {
   background-image: url(../images/better-icon-five.png);
 }
 
@@ -1096,10 +1100,12 @@ h1 {
   position: relative;
   /*top: 75px;*/
 }
-.better-text {
-	text-align: center}
+/* .better-text {
+	text-align: center} */
 .better-text span {
-	text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+	  text-transform: uppercase;
     text-align: center;
     font-weight: 600;
     color: #1088b9;

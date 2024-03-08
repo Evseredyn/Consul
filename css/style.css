@@ -1110,6 +1110,7 @@ h1 {
     font-weight: 600;
     color: #1088b9;
 	}
+  
 .team-title:before {
   content: '';
   display: inline-block;

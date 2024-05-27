@@ -191,12 +191,12 @@
                             <div class="connect">
                                 <div class="connect-body">
                                     <div class="connect-title">Розрахувати вартість</div>
-                                    <form id="demoForm4" method="post" class="connect-form" action="../mail_raschet.php" enctype="multipart/form-data">
+                                    <form id="demoForm4" method="post" class="connect-form" action="./phpmailer/src/mail_raschet.php" enctype="multipart/form-data">
                                         <ul class="connect-list">
                                             <li class="connect-item">
                                                 <label class="connect-label">
                                                     <span class="connect-icon connect-icon-one"></span>
-                                                    <input name="name" type="text" class="connect-field _req" placeholder="Ваше им'я*" required>
+                                                    <input name="name" type="text" class="connect-field _req" placeholder="Ваше ім'я*" required>
                                                 </label>
                                             </li>
                                             <li class="connect-item">
@@ -208,36 +208,36 @@
                                             <li class="connect-item">
                                                 <label class="connect-label">
                                                     <span class="connect-icon connect-icon-three"></span>
-                                                    <input name="phone" type="number" class="connect-field _req" placeholder="Ваш телефон*" required>
+                                                    <input name="phone" type="tel" class="connect-field _req" placeholder="Ваш телефон*" required>
                                                 </label>
                                             </li>
                                             <li class="connect-item">
                                                 <label class="connect-label">
                                                     <span class="connect-icon connect-icon-four"></span>
-                                                    <input id="formImage" accept=".jpg, .png, .gif" type="file" name="file[]" class="filename connect-field connect-field-document" value="Прикрепить документ" multiple>
+                                                    <input id="formImage" accept=".jpg, .png, .gif" type="file" name="file[]" class="filename connect-field connect-field-document" value="Прикріпити документ" multiple>
                                                     <span class="connect-document">Прикріпити документ</span>
                                                 </label>
                                             </li>
                                             <li class="connect-item connect-item3">
                                                 <label class="connect-label">
                                                     <span class="connect-icon connect-icon-five"></span>
-                                                    <textarea name="message" type="text" class="connect-field _req" placeholder="Ваше запитання*" required></textarea>
+                                                    <textarea name="message" type="text" class="connect-field resize_vert _req" placeholder="Ваше запитання*" required></textarea>
                                                 </label>
                                             </li>
                                             
                                         </ul>
                                         <input type="hidden" name="secret" value id="secret2">
                                         <div class="connect-end connect-item-full">
-                                            <button class="connect-btn dop-btn2" onclick="yaCounter88109160.reachGoal('zakaz-obratnogo-zvonka'); return true;">Розрахувати вартість</button>
+                                            <button class="connect-btn dop-btn2 _sending" onclick="yaCounter88109160.reachGoal('zakaz-obratnogo-zvonka'); return true;">Розрахувати вартість</button>
                                         </div>
                                     </form>
-                                    <script async src="js/tag.js"></script><script async src="js/tag.js"></script><script>
- /*блокировка спама*/
-    let secret2 = document.querySelector('#secret2'); 
-  document.querySelector('.dop-btn2').onclick = function(){
-    secret2.value = 'secretkey';
-  };
- </script> 
+    <script> 
+        /*блокировка спама*/
+        let secret2 = document.querySelector('#secret2'); 
+        document.querySelector('.dop-btn2').onclick = function(){
+        secret2.value = 'secretkey';
+        };
+    </script> 
                                 </div>
                             </div>
                         </div>
@@ -286,9 +286,10 @@
     </section>
 <!--/noindex-->
 <section>
-        <div class="content">
-    <div class="numbers-title"><h1>Документи з <span class="blue">з України та Ізраїлю за кордон</span> </h1></div>    
-    </div></section>
+    <div class="content">
+        <div class="numbers-title"><h1>Документи <span class="blue">з України та Ізраїлю за кордон</span></h1></div>    
+    </div>
+</section>
 <!--noindex-->
 <section class="wecan wecan2" id="cx1">
         <div class="content">
@@ -347,42 +348,42 @@
                 Потрібна консультація?
             </div>
             <div class="free-top">
-                <form id="demoForm5" class="free-form" method="post" action="../mail_raschet.php" enctype="multipart/form-data">
+                <form id="demoForm5" class="free-form" method="post" action="./phpmailer/src/mail_raschet.php" enctype="multipart/form-data">
                     <ul class="free-list">
                         <li class="free-item">
                             <label class="connect-label">
                                 <span class="connect-icon connect-icon-one"></span>
-                                <input name="name" type="text" class="connect-field _req" placeholder="Ваше им'я*" required>
+                                <input id="formName" name="name" type="text" class="connect-field _req" placeholder="Ваше ім'я*" required>
                             </label>
                         </li>
                         <li class="free-item">
                             <label class="connect-label">
                                 <span class="connect-icon connect-icon-thue"></span>
-                                <input name="email" type="email" class="connect-field _email" placeholder="Ваш Email">
+                                <input id="formEmail" name="email" type="email" class="connect-field _email" placeholder="Ваш Email">
                             </label>
                         </li>
                         <li class="free-item">
                             <label class="connect-label">
                                 <span class="connect-icon connect-icon-three"></span>
-                                <input name="phone" type="number" class="connect-field _req" placeholder="Ваш телефон*" required>
+                                <input id="formPhone" name="phone" type="tel" class="connect-field _req" placeholder="Ваш телефон*" required>
                             </label>
                         </li>
                         <li class="free-item">
                             <label class="connect-label">
                                 <span class="connect-icon connect-icon-five"></span>
-                                <input name="message" type="text" class="connect-field _req" placeholder="Ваше запитання*" required>
+                                <input id="formMessage" name="message" type="text" class="connect-field _req" placeholder="Ваше запитання*" required>
                             </label>
                         </li>
                         <li class="free-item">
                             <label class="connect-label">
                                 <span class="connect-icon connect-icon-four"></span>
-                                <input id="formImage" accept=".jpg, .png, .gif" type="file" name="file[]" class="connect-field connect-field-document" value="Прикрепити документ" multiple>
+                                <input id="formImage" accept=".jpg, .png, .pdf" type="file" name="file[]" class="connect-field connect-field-document" value="Прикрепити документ" multiple>
                                 <span class="connect-document">Прикріпити документ</span>
                             </label>
                         </li>
                          <input type="hidden" name="secret" value id="secret3">
                         <li class="free-item">
-                            <button name="sendMail" id="btnSubmit5" class="connect-btn dop-btn3" onclick="yaCounter88109160.reachGoal('zakaz-obratnogo-zvonka'); return true;">Надіслати заявку</button>
+                            <button name="sendMail" id="btnSubmit5" class="connect-btn dop-btn3 _sending" onclick="yaCounter88109160.reachGoal('zakaz-obratnogo-zvonka'); return true;">Надіслати заявку</button>
                         </li>
                     </ul>
                 </form>
@@ -712,18 +713,18 @@
 	<div id="dialog" class="window">
     <a href="#" class="close"><img src="images/close.png" alt="закрити" title="закрити"></a>
 	<p class="mod1">Замовити дзвінок спеціаліста</p>
-    <form id="demoForm" class="response-form obr-zv" method="post" action="../mail_raschet.php" enctype="multipart/form-data">
+    <form id="demoForm" class="response-form obr-zv" method="post" action="./phpmailer/src/mail_raschet.php" enctype="multipart/form-data">
                                 <ul class="connect-list">
                                             <li class="connect-item">
                                                 <label class="connect-label">
                                                     <span class="connect-icon connect-icon-one"></span>
-                                                    <input name="name" type="text" class="connect-field _req" placeholder="Ваше им'я*" required>
+                                                    <input name="name" type="text" class="connect-field _req" placeholder="Ваше ім'я*" required>
                                                 </label>
                                             </li>
                                             <li class="connect-item">
                                                 <label class="connect-label">
                                                     <span class="connect-icon connect-icon-three"></span>
-                                                    <input name="phone" type="number" class="connect-field _req" placeholder="Ваш телефон*" required>
+                                                    <input name="phone" type="tel" class="connect-field _req" placeholder="Ваш телефон*" required>
                                                 </label>
                                             </li>
                                             <li class="connect-item">
@@ -741,15 +742,15 @@
                                             <li class="connect-item">
                             <label class="connect-label">
                                 <span class="connect-icon connect-icon-four"></span>
-                                <input id="formImage" accept=".jpg, .png, .gif" type="file" name="file[]" class="connect-field" value="Прикрепить документ" placeholder="Прикріпити документ" multiple>
-                               
+                                <input id="formImage" accept=".jpg, .png, .gif" type="file" name="file[]" class="connect-field" value="Прикріпити документ" placeholder="Прикріпити документ" multiple>
                             </label>
+                            <div id="formPreview" class="file__preview"></div>
                         </li>
                                         </ul>
                         <input type="hidden" name="secret" value id="secret1">
                                          
                                         <div class="response-item">
-                                            <button class="price-btn response-btn dop-btn1" onclick="yaCounter88109160.reachGoal('zakaz-obratnogo-zvonka'); return true;">Відправити</button>
+                                            <button class="price-btn response-btn dop-btn1 _sending" onclick="yaCounter88109160.reachGoal('zakaz-obratnogo-zvonka'); return true;">Відправити</button>
                                         </div>
                             </form>	
 	</div>
@@ -760,18 +761,19 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/apps.js"></script>
-	<script src="js/jquery-modal-video.min.js"></script> 
+	<!--<script src="js/jquery-modal-video.min.js"></script> -->
     <script src="js/dopolnitelno.js"></script>  
     <script src="js/lightbox_plus_min.js"></script>
-    <script src="js/script.js"></script> 
-    	<script>
+    <script src="js/script.js"></script>
+
+<!--    	<script>
 		$(".js-video-button").modalVideo({
 			youtube:{
 				controls:0,
 				nocookie: true
 			}
 		});
-	</script>
+	</script> -->
     
 <!-- <div class="none4">  
 

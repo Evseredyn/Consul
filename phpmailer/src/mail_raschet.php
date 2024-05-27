@@ -1,11 +1,18 @@
 <?php
-   use PHPMailer\PHPMailer\PHPMailer;
+   /*use PHPMailer\PHPMailer\PHPMailer;
    use PHPMailer\PHPMailer\Exception;
    
    require 'phpmailer/scr/Exception.php';
-   require 'phpmailer/scr/PHPMailer.php';
+   require 'phpmailer/scr/PHPMailer.php';*/
 
-   $mail = new PHPMailer(true);
+   require_once('PHPMailer.php');
+   require_once('Exception.php');
+   require_once('SMTP.php');
+
+   use PHPMailer\PHPMailer\PHPMailer;
+   use PHPMailer\PHPMailer\Exception;
+
+   /*$mail = new PHPMailer(true);*/
    $mail->CharSet = 'UTF-8';
    $mail->setLanguage('uk', 'phpmailer/language/');
    $mail->IsHTML(true);
@@ -13,33 +20,30 @@
    //От кого письмо
    $mail->setFrom('info@docukraine.com.ua', 'Сайт ДОКУМЕНТИ УКРАЇНА'); 
    //Кому отправить
-   $mail->addAdress('admin@docukraine.com.ua');
+   $mail->addAddress('info@docukraine.com.ua; zhenyavn@gmail.com');
    //Тема письма
-   $mail->Subject = 'Сайт ДОКУМЕНТИ УКРАЇНА'ж
+   $mail->Subject = 'Сайт ДОКУМЕНТИ УКРАЇНА';
 
    //Тело письма
    $body = '<h1>Нове звернення через сайт ДОКУМЕНТИ УКРАЇНА!</h1>';
 
-   if(trin(!empty($_POST['name']))){
-    $body.='<p><strong>Ім'я:</strong> '.$_POST['name'].'</p>';
+   if(trim(!empty($_POST['name']))){
+    $body.='<p><strong>Ім\'я:</strong> '.$_POST['name'].'</p>';
    }
-   if(trin(!empty($_POST['email']))){
-    $body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
+   if(trim(!empty($_POST['email']))){
+    $body.='<p><strong>e-mail:</strong> '.$_POST['email'].'</p>';
    }
-   if(trin(!empty($_POST['phone']))){
+   if(trim(!empty($_POST['phone']))){
     $body.='<p><strong>Телефон:</strong> '.$_POST['phone'].'</p>';
    }
-   if(trin(!empty($_POST['message']))){
+   if(trim(!empty($_POST['message']))){
     $body.='<p><strong>Повідомлення:</strong> '.$_POST['message'].'</p>';
-   }
-   if(trin(!empty($_POST['name']))){
-    $body.='<p><strong>Ім'я:</strong> '.$_POST['name'].'</p>';
    }
 
    //Прикрепить файл
-   if (!empty($_FILES['image'][['tmp_name']])) {
+   if (!empty($_FILES['image']['tmp_name'])) {
     //путь загрузки файла
-    $filePath = __DIR__ . "/files/" . $_FILES['message']['name'];
+    $filePath = __DIR__ . "/files/" . $_FILES['image']['name'];
     //грузим файл
     if (copy($_FILES['image']['tmp_name'], $filePath)){
         $fileAttach = $filePath;
@@ -56,6 +60,7 @@
    } else {
     $message = 'Форма надіслана!';
    }
+
    $response = ['message' => $message];
 
    header('Content-type: application/json');

@@ -15,12 +15,13 @@
    /*$mail = new PHPMailer(true);*/
    $mail->CharSet = 'UTF-8';
    $mail->setLanguage('uk', 'phpmailer/language/');
-   $mail->IsHTML(true);
+   $mail->IsHTML();
 
    //От кого письмо
    $mail->setFrom('info@docukraine.com.ua', 'Сайт ДОКУМЕНТИ УКРАЇНА'); 
    //Кому отправить
-   $mail->addAddress('info@docukraine.com.ua; zhenyavn@gmail.com');
+   $mail->addAddress('info@docukraine.com.ua');
+   $mail->addAddress('zhenyavn@gmail.com');
    //Тема письма
    $mail->Subject = 'Сайт ДОКУМЕНТИ УКРАЇНА';
 

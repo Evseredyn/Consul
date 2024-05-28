@@ -793,6 +793,7 @@ body {
 
 .resize_vert {
   resize: vertical;
+  max-height: 100px;
 }
 
 .file__preview {

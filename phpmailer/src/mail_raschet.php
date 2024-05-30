@@ -12,11 +12,11 @@
 
    $mail = new PHPMailer();
    $mail->isSMTP();
-   $mail->Host = 'sandbox.smtp.mailtrap.io';
+   $mail->Host = 'mail.adm.tools';
    $mail->SMTPAuth = true;
-   $mail->Port = 2525;
-   $mail->Username = '35159d57085c8e';
-   $mail->Password = 'ca07976004eb60';
+   $mail->Port = 465;
+   $mail->Username = 'info@docukraine.com.ua';
+   $mail->Password = 'DocUkraine.com.ua@2024';
 
 //   $mail = new PHPMailer(true);
    $mail->CharSet = 'UTF-8';

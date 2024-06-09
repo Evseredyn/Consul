@@ -29,7 +29,7 @@
 
 //Кому отправить
    $mail->addAddress('info@docukraine.com.ua');
-   $mail->addAddress('test@test.loc');
+   $mail->addAddress('zhenyavn@gmail.com');
 //Тема письма
    $mail->Subject = 'Сайт ДОКУМЕНТИ УКРАЇНА';
 
